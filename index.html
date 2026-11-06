@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)file:///c%3A/Users/Bintang/OneDrive/Lampiran/bintang/Bintangrizki.html -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="description" content="Katalog materi, jawaban UTS, dan makalah pembelajaran Bintang Rizki Fadillah.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog, UTS &amp; Makalah Pembelajaran - Bintang Rizki Fadillah</title>
+    <style>
+        /* Reset & Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #3b82f6;
+            --accent-color: #eff6ff;
+            --bg-color: #f8fafc;
+            --text-color: #334155;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigasi */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            letter-spacing: 0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.5rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            padding: 5rem 1rem;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #60a5fa;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #cbd5e1;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        /* Container Section */
+        section {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 0.5rem auto 0;
+        }
+
+        /* Grid Katalog / Bab */
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .catalog-card {
+            background-color: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .catalog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .catalog-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            margin-bottom: 0.8rem;
+        }
+
+        .card-body h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .card-body ul {
+            padding-left: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.92rem;
+            color: #475569;
+        }
+
+        .card-body ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-detail {
+            display: block;
+            text-align: center;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.7rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-detail:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Area Artikel / Makalah / UTS */
+        .article-section {
+            background-color: #ffffff;
+            border-top: 3px solid var(--secondary-color);
+            padding: 4rem 5%;
+        }
+
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+            scroll-margin-top: 100px;
+        }
+
+        .article-container h2 {
+            color: var(--secondary-color);
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.3rem;
+        }
+
+        .article-container h3 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-top: 1.2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .article-container p, .article-container ol {
+            margin-bottom: 1rem;
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        .article-container ol {
+            padding-left: 1.5rem;
+        }
+
+        .article-container ol li {
+            margin-bottom: 0.8rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .article-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigasi Utama -->
+    <header>
+        <div class="logo">Modul Bintang Rizki</div>
+        <nav>
+            <ul>
+                <li><a href="#katalog">Beranda &amp; Katalog</a></li>
+                <li><a href="#uts" style="background-color: #e11d48;">UTS (05/11/2026)</a></li>
+                <li><a href="#makalah" style="background-color: var(--secondary-color);">Makalah I/O</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Katalog Modul Pembelajaran Teknologi</h1>
+        <p>Rangkuman materi seputar internet, perangkat komputer, keamanan digital, hingga jawaban UTS oleh Bintang Rizki Fadillah.</p>
+        <a href="#uts" class="btn">Lihat Jawaban UTS</a>
+    </div>
+
+    <!-- Section Katalog Materi -->
+    <section id="katalog">
+        <h2 class="section-title">Daftar Modul &amp; Bab</h2>
+        
+        <div class="catalog-grid">
+            <!-- Bab 2 -->
+            <div class="catalog-card">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Bab 2">
+                <div class="card-body">
+                    <span class="tag">Bab 2</span>
+                    <h3>Konektivitas &amp; Komunikasi Online</h3>
+                    <ul>
+                        <li><strong>Evolusi Internet:</strong> ARPANET (1969).</li>
+                        <li><strong>Infrastruktur:</strong> IP Address &amp; DNS Server.</li>
+                        <li><strong>Web &amp; Komunikasi:</strong> Web 2.0 &amp; Netiket.</li>
+                    </ul>
+                    <a href="#bab2" class="btn-detail">bab 2</a>
+                </div>
+            </div>
+
+            <!-- Bab 3 -->
+            <div class="catalog-card">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Bab 3">
+                <div class="card-body">
+                    <span class="tag">Bab 3</span>
+                    <h3>Komputer &amp; Perangkat Seluler</h3>
+                    <ul>
+                        <li><strong>Kategori Komputer:</strong> Desktop, Server, Superkomputer.</li>
+                        <li><strong>Perangkat Portabel:</strong> Smartphone &amp; Wearables.</li>
+                        <li><strong>Koneksi &amp; Proteksi:</strong> Port, UPS, &amp; Ergonomi.</li>
+                    </ul>
+                    <a href="#bab3" class="btn-detail">bab 3</a>
+                </div>
+            </div>
+
+            <!-- Bab 4 -->
+            <div class="catalog-card">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Bab 4">
+                <div class="card-body">
+                    <span class="tag">Bab 4</span>
+                    <h3>Program &amp; Aplikasi</h3>
+                    <ul>
+                        <li><strong>Sistem Operasi:</strong> Manajemen hardware &amp; app.</li>
+                        <li><strong>Produktivitas:</strong> Word Processor &amp; Spreadsheet.</li>
+                        <li><strong>Security Tools:</strong> Antivirus, Firewall &amp; Backup.</li>
+                    </ul>
+                    <a href="#bab4" class="btn-detail">bab 4</a>
+                </div>
+            </div>
+
+            <!-- Bab 5 -->
+            <div class="catalog-card">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Bab 5">
+                <div class="card-body">
+                    <span class="tag">Bab 5</span>
+                    <h3>Keamanan, Etika &amp; Privasi Digital</h3>
+                    <ul>
+                        <li><strong>Ancaman Malware:</strong> Virus, Worm, DoS/DDoS.</li>
+                        <li><strong>Kontrol Akses:</strong> Biometrik, 2FA, Enkripsi.</li>
+                        <li><strong>Etika &amp; Privasi:</strong> Green Computing &amp; Phishing.</li>
+                    </ul>
+                    <a href="#bab5" class="btn-detail">bab 5</a>
+                </div>
+            </div>
+
+            <!-- Bab 6 -->
+            <div class="catalog-card">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Bab 6">
+                <div class="card-body">
+                    <span class="tag">Bab 6</span>
+                    <h3>Komponen Pemrosesan (CPU)</h3>
+                    <ul>
+                        <li><strong>Prosesor:</strong> Control Unit &amp; ALU.</li>
+                        <li><strong>Memori Utama:</strong> RAM, ROM, Flash, Cache.</li>
+                        <li><strong>Sistem Bus:</strong> Transmisi data digital (Bit/Byte).</li>
+                    </ul>
+                    <a href="#bab6" class="btn-detail">bab 6</a>
+                </div>
+            </div>
+
+            <!-- Bab 7 -->
+            <div class="catalog-card">
+                <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Bab 7">
+                <div class="card-body">
+                    <span class="tag">Bab 7</span>
+                    <h3>Perangkat Input &amp; Output</h3>
+                    <ul>
+                        <li><strong>Input Devices:</strong> Keyboard, Touchscreen, RFID.</li>
+                        <li><strong>Input Khusus:</strong> Sensor gerak, Audio/Video.</li>
+                        <li><strong>Output Devices:</strong> Monitor, Printer, Speaker.</li>
+                    </ul>
+                    <a href="#bab7" class="btn-detail">bab 7</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Lembar Jawaban UTS -->
+    <div class="article-section" style="border-top-color: #e11d48;">
+        <main class="article-container" id="uts">
+            <span class="tag" style="background-color: #ffe4e6; color: #e11d48;">Lembar Jawaban UTS - 05/11/2026</span>
+            <h1 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 1.5rem;">Jawaban Soal Essay UTS Perangkat Komputer &amp; Internet</h1>
+            
+            <ol>
+                <li><strong>Scanner:</strong> Perangkat input untuk memindai dokumen/gambar fisik menjadi format digital.</li>
+                <li><strong>Monitor:</strong> Perangkat output visual untuk menampilkan antarmuka dan data komputer.</li>
+                <li><strong>Modem:</strong> Modulator Demodulator; alat pengubah sinyal analog ke digital dan sebaliknya untuk koneksi internet.</li>
+                <li><strong>Flashdisk:</strong> Perangkat penyimpanan data eksternal portabel berbasis memori kilat (flash memory).</li>
+                <li><strong>Data Projector:</strong> Perangkat output yang memproyeksikan tampilan monitor ke permukaan datar/layar besar.</li>
+                <li><strong>Touch Pad:</strong> Perangkat penunjuk berupa papan sentuh pengganti mouse pada laptop.</li>
+                <li><strong>Scanner:</strong> Perangkat input pemindai dokumen cetak menjadi berkas gambar/teks digital.</li>
+                <li><strong>Bar Code Reader:</strong> Perangkat input optik untuk membaca kode batang (barcode) produk.</li>
+                <li><strong>Tape:</strong> Media penyimpanan data berbasis pita magnetik untuk arsip/backup data skala besar.</li>
+                <li><strong>Modem:</strong> Komponen jaringan yang menghubungkan komputer ke penyedia layanan internet (ISP).</li>
+                <li><strong>Data Projector:</strong> Alat pemancar proyeksi visual untuk presentasi atau media pembelajaran.</li>
+                <li><strong>Sound Card:</strong> Kartu suara yang mengolah dan memproses data audio pada sistem komputer.</li>
+                <li><strong>Personal Digital Assistant:</strong> Perangkat genggam komputer seluler pintar era sebelum smartphone modern.</li>
+                <li><strong>Personal Data Assistant:</strong> Istilah yang kerap mengacu pada PDA (Personal Digital Assistant) untuk kelola data pribadi.</li>
+                <li><strong>Person Digital Assistant:</strong> Variasi penulisan dari PDA (perangkat asisten digital pribadi).</li>
+                <li><strong>Program Digital Assistant:</strong> Software asisten virtual berbasis kecerdasan digital/komputer.</li>
+                <li><strong>Programmer:</strong> Perancang dan pembuat program komputer menggunakan bahasa pemrograman.</li>
+                <li><strong>Hacker:</strong> Ahli komputer yang menerobos sistem komputer (bisa bersifat etik/positif maupun negatif).</li>
+                <li><strong>Cracker:</strong> Peretas yang merusak atau menerobos sistem jaringan secara ilegal untuk tujuan kejahatan.</li>
+                <li><strong>Central Processing Unit:</strong> Otak utama komputer yang mengolah seluruh instruksi dan perintah sistem.</li>
+                <li><strong>Communication Processing Unit:</strong> Unit prosesor khusus untuk mengelola lalu lintas data komunikasi jaringan.</li>
+                <li><strong>Complication Processing Unit:</strong> Opsi salah/istilah keliru dari pengolahan data pemrosesan.</li>
+                <li><strong>Central Production Unit:</strong> Istilah non-standar; mengacu pada pusat kontrol sistem produksi berbasis komputer.</li>
+                <li><strong>E-mail:</strong> Electronic Mail; layanan surat-menyurat elektronik secara online melalui jaringan internet.</li>
+                <li><strong>Hacking:</strong> Aktivitas membedah atau meretas akses ke dalam suatu sistem komputer/jaringan.</li>
+                <li><strong>Cracking:</strong> Tindakan pembobolan sistem secara ilegal dan merusak (seperti membajak software).</li>
+                <li><strong>Netiquette:</strong> Etika dan tata krama dalam berkomunikasi serta berinteraksi di dunia internet.</li>
+                <li><strong>Zeta Byte (ZB):</strong> Satuan kapasitas data sebesar 1.024 Exabyte ($10^{21}$ byte).</li>
+                <li><strong>Mega Byte (MB):</strong> Satuan kapasitas data sebesar 1.024 Kilo Byte atau sekitar 1 juta byte.</li>
+                <li><strong>Giga Byte (GB):</strong> Satuan kapasitas memori sebesar 1.024 Mega Byte atau 1 miliar byte.</li>
+                <li><strong>Tera Byte (TB):</strong> Satuan ukuran data digital sebesar 1.024 Giga Byte.</li>
+                <li><strong>Bit:</strong> Binary Digit; unit data terkecil dalam sistem komputer (bernilai 0 atau 1).</li>
+                <li><strong>Byte:</strong> Kumpulan dari 8 bit data digital yang merepresentasikan satu karakter.</li>
+                <li><strong>Character:</strong> Karakter tunggal berupa huruf, angka, atau simbol khusus pada sistem komputer.</li>
+                <li><strong>Kilo Byte:</strong> Ukuran kapasitas data sebesar 1.024 Byte.</li>
+                <li><strong>Kilo Byte:</strong> Ukuran data yang setara dengan 1.024 Byte (0.001 Megabyte).</li>
+                <li><strong>Kilo Bit:</strong> Satuan kecepatan transmisi data sebesar 1.000 bit ($kbps$).</li>
+                <li><strong>Bit:</strong> Elemen data biner dasar (0/1) dalam pemrosesan komputer.</li>
+                <li><strong>256 Byte:</strong> Kapasitas data berukuran 256 byte ($256 \times 8$ bit).</li>
+                <li><strong>512 Byte:</strong> Kapasitas data sebesar 512 byte (ukuran baku satu sektor disk lama).</li>
+                <li><strong>1024 Byte:</strong> Ukuran data yang sama nilainya dengan 1 Kilo Byte (KB).</li>
+                <li><strong>.mp3:</strong> Format kompresi berkas berkas audio/suara digital.</li>
+                <li><strong>.docx:</strong> Format berkas dokumen teks Microsoft Word versi modern.</li>
+                <li><strong>.xls:</strong> Format berkas lembar kerja spreasheet Microsoft Excel versi terdahulu.</li>
+                <li><strong>.psd:</strong> Format dokumen mentah asli dari aplikasi pengolah gambar Adobe Photoshop.</li>
+                <li><strong>www.http://yahoo.com:</strong> Penulisan URL tidak valid karena menggabungkan www dan protokol secara terbalik.</li>
+                <li><strong>http://mail~yahoo.com:</strong> URL tidak standar/salah penulisan karena menggunakan tanda tilde (~).</li>
+                <li><strong>www.mail.yahoo.com:</strong> Subdomain alamat web layanan Yahoo Mail.</li>
+                <li><strong>http://id.yahoo.com:</strong> Alamat URL situs Yahoo dalam versi regional Indonesia.</li>
+                <li><strong>Scanner:</strong> Alat pengambil citra digital dari lembaran fisik dokumen.</li>
+                <li><strong>Monitor:</strong> Layar penampilan antarmuka visual data komputer.</li>
+                <li><strong>Barcode Reader:</strong> Alat pemindai garis barcode pada produk grosir/kasir.</li>
+                <li><strong>Touch Screen:</strong> Layar monitor responsif terhadap sentuhan jari pengguna.</li>
+                <li><strong>Data Projector:</strong> Alat pemancar layar komputer ke media kain/dinding presentasi.</li>
+                <li><strong>Printer:</strong> Perangkat output untuk mencetak berkas teks/gambar ke media kertas.</li>
+                <li><strong>Speaker:</strong> Perangkat output audio penghasil gelombang suara dari sistem.</li>
+                <li><strong>Bar Code Reader:</strong> Perangkat optik pembaca kode batang barang/produk.</li>
+                <li><strong>ccTLD &amp; gTLD:</strong> 
+                    <ul>
+                        <li><strong>ccTLD (Country Code Top-Level Domain):</strong> Domain tingkat atas berbasis kode negara (Contoh: <code>.id</code> untuk Indonesia, <code>.jp</code> untuk Jepang).</li>
+                        <li><strong>gTLD (Generic Top-Level Domain):</strong> Domain tingkat atas yang bersifat umum secara global tanpa terbatas wilayah (Contoh: <code>.com</code> untuk komersial, <code>.org</code> untuk organisasi).</li>
+                    </ul>
+                </li>
+                <li><strong>Control Unit (CU):</strong> Komponen internal CPU yang bertugas mengatur dan mengendalikan jalannya seluruh instruksi program.</li>
+                <li><strong>Buffer dalam CPU:</strong> Memori penampung sementara untuk menyelaraskan perbedaan kecepatan proses data.</li>
+                <li><strong>Arithmetic and Logic Unit (ALU):</strong> Bagian dalam CPU yang mengeksekusi perhitungan matematika dan operasi logika biner.</li>
+                <li><strong>Register:</strong> Lokasi memori internal CPU berkecepatan paling tinggi untuk penampungan pemrosesan instruksi sementara.</li>
+                <li><strong>Oracle:</strong> Sistem manajemen basis data relasional (RDBMS) skala besar tingkat perusahaan.</li>
+                <li><strong>MySQL:</strong> Sistem basis data relasional (RDBMS) sumber terbuka (open-source) berbasis SQL.</li>
+                <li><strong>JAVA:</strong> Bahasa pemrograman berorientasi objek yang dapat dijalankan lintas berbagai platform (multiplatform).</li>
+                <li><strong>UNIX:</strong> Sistem operasi komputer yang tangguh dan menjadi dasar dari berbagai sistem operasi modern.</li>
+                <li><strong>Perl:</strong> Bahasa pemrograman tingkat tinggi yang populer untuk pemrosesan teks dan skrip server.</li>
+                <li><strong>MS-Office 2000:</strong> Paket aplikasi produktivitas perkantoran buatan Microsoft rilis tahun 2000.</li>
+                <li><strong>Xenix:</strong> Sistem operasi versi UNIX yang dikembangkan oleh Microsoft pada era 1980-an.</li>
+                <li><strong>PHP:</strong> Bahasa pemrograman skrip sisi server (server-side) yang digunakan dalam pembuatan web dinamis.</li>
+                <li><strong>http://:</strong> Hypertext Transfer Protocol; protokol dasar untuk pertukaran dokumen di WWW.</li>
+                <li><strong>www:</strong> World Wide Web; sistem informasi dokumen terhubung yang diakses melalui internet.</li>
+                <li><strong>co.id:</strong> Domain tingkat dua (SLD) di bawah ccTLD Indonesia khusus untuk perusahaan komersial resmi.</li>
+                <li><strong>.tv:</strong> Domain ccTLD milik negara Tuvalu yang umum digunakan untuk situs stasiun televisi/media.</li>
+                <li><strong>.idn:</strong> Ekstensi domain khusus ccTLD untuk Indonesia atau ranah IDN (Internationalized Domain Name).</li>
+                <li><strong>.co:</strong> Domain ccTLD milik Kolombia yang kerap dipakai sebagai alternatif domain komersial pengganti .com.</li>
+                <li><strong>.to:</strong> Domain ccTLD milik negara Tonga.</li>
+                <li><strong>www.news.tv:</strong> Alamat URL situs berita yang menggunakan domain ekstensi .tv.</li>
+                <li><strong>www.news.com.sg:</strong> Alamat URL portal berita komersial resmi berbasis di Singapura (.sg).</li>
+                <li><strong>www.news.com.my:</strong> Alamat URL portal berita komersial resmi berbasis di Malaysia (.my).</li>
+                <li><strong>www.news.biz:</strong> Alamat URL portal informasi berita berskala bisnis (.biz).</li>
+            </ol>
+
+            <a href="#katalog" class="btn" style="margin-top: 2rem; border-radius: 6px; padding: 0.6rem 1.5rem;">↑ Kembali ke Katalog Atas</a>
+        </main>
+    </div>
+
+    <!-- Section Makalah Perangkat Input & Output -->
+    <div class="article-section">
+        <main class="article-container" id="makalah">
+            <span class="tag">Makalah Akademik</span>
+            <h1 style="color: var(--primary-color); font-size: 2.2rem; margin-bottom: 1.5rem;">Analisis Komprehensif Perangkat Input dan Output (I/O) pada Sistem Komputer</h1>
+            
+            <h2>1. Pendahuluan</h2>
+            <p>Sistem komputer modern terdiri dari beberapa elemen utama yang saling terintegrasi, di antaranya adalah unit pemrosesan (CPU), memori, serta perangkat masukan dan keluaran atau yang biasa dikenal sebagai <em>Input and Output (I/O) Devices</em>. Perangkat I/O memegang peranan vital sebagai jembatan komunikasi antara pengguna manusia (user) dengan sistem inti komputer, memungkinkan data dimasukkan untuk diproses serta hasil pemrosesan disajikan kembali dalam bentuk yang dapat dimengerti.</p>
+            
+            <h2>2. Perangkat Input (Masukan)</h2>
+            <p>Perangkat input adalah sebarang komponen perangkat keras yang memungkinkan pengguna memasukkan data, perintah, atau program ke dalam sistem komputer. Berdasarkan perkembangannya, perangkat input diklasifikasikan ke dalam beberapa kategori:</p>
+            <ul>
+                <li><strong>Perangkat Pengetikan &amp; Penunjuk:</strong> Keyboard sebagai alat input teks utama, serta Mouse dan Touchpad sebagai perangkat penunjuk grafis pada antarmuka sistem operasi.</li>
+                <li><strong>Perangkat Layar Sentuh &amp; Pena Digital:</strong> Touchscreen dan Stylus yang menggabungkan fungsi lihat dan sentuh, banyak digunakan pada perangkat seluler dan komputer modern.</li>
+                <li><strong>Perangkat Pemindai &amp; Pengenal Khusus:</strong> Scanner dokumen, Barcode reader, mesin RFID, serta sensor biometrik (seperti pemindai sidik jari dan pengenal wajah) untuk keamanan dan identifikasi cepat.</li>
+                <li><strong>Input Suara dan Video:</strong> Mikrofon untuk input audio serta kamera digital/webcam untuk menangkap citra visual dan video.</li>
+            </ul>
+
+            <h2>3. Perangkat Output (Keluaran)</h2>
+            <p>Perangkat output berfungsi untuk menampilkan, mencetak, atau menyajikan hasil pengolahan data yang telah diproses oleh CPU kepada pengguna. Jenis perangkat output utama meliputi:</p>
+            <ul>
+                <li><strong>Perangkat Tampilan (Display):</strong> Monitor (LED, LCD, OLED) yang menyajikan antarmuka visual secara real-time.</li>
+                <li><strong>Perangkat Cetak (Hardcopy Output):</strong> Berbagai varian printer seperti Printer Inkjet untuk cetak warna grafis, Laser printer untuk kecepatan tinggi perkantoran, dan Thermal printer untuk struk transaksi.</li>
+                <li><strong>Perangkat Audio:</strong> Speaker dan Headphone yang mengubah sinyal digital komputer menjadi gelombang suara yang dapat didengar.</li>
+                <li><strong>Proyektor Digital:</strong> Alat penampil skala besar yang sering digunakan untuk presentasi dan media pembelajaran visual.</li>
+            </ul>
+
+            <h2>4. Kesimpulan</h2>
+            <p>Perangkat input dan output merupakan bagian esensial yang menentukan tingkat kenyamanan, efisiensi, dan fungsionalitas dari sebuah sistem komputer. Tanpa adanya perangkat I/O yang memadai, komunikasi instruksi antara manusia dengan mesin pengolah data tidak akan dapat terjalin secara optimal.</p>
+
+            <a href="#katalog" class="btn" style="margin-top: 2rem; border-radius: 6px; padding: 0.6rem 1.5rem;">↑ Kembali ke Katalog Atas</a>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Bintang Rizki Fadillah. Seluruh Hak Cipta Dilindungi.</p>
+    </footer>
+
+
+</body></html>
